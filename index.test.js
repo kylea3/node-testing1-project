@@ -30,7 +30,12 @@ describe('[Exercise 2] trimPropertiesMutation', () => {
 })
 
 describe('[Exercise 3] findLargestInteger', () => {
-  // test('[5] returns the largest number in an array of objects { integer: 2 }', () => {})
+  test('[5] returns the largest number in an array of objects { integer: 2 }', () => {
+    const input = [{ integer: 2}, { integer: 7}, { integer: 3}, { integer: 5}]
+    const actual = utils.findLargestInteger(input)
+    const expected = 7
+    expect(actual).toEqual(expected)
+  })
 })
 
 describe('[Exercise 4] Counter', () => {
