@@ -90,8 +90,9 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
+    this.seasons = ['summer', 'fall', 'winter', 'spring'],
+    this.seasonIndex = 3
   }
-
   /**
    * [Exercise 5B] Seasons.prototype.next returns the next season
    * @returns {string} - the next season starting with "summer"
@@ -106,6 +107,12 @@ class Seasons {
    */
   next() {
     // ✨ implement
+    if(this.seasonIndex < 3) {
+      ++this.seasonIndex
+    } else {
+      this.seasonIndex = 0
+    }
+    return this.seasons[this.seasonIndex]
   }
 }
 
